@@ -1,0 +1,6 @@
+VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
+
+nano /var/spool/bandit24/foo/script
+chmod 777 /var/spool/bandit24/foo/script
+sudo cat /etc/bandit_pass/bandit24 > /tmp/myfolder/pass
+chmod 777 /tmp/myfolder/pass

@@ -1,0 +1,2 @@
+accesso tramite chiave privata:
+ssh -i C:\Users\federicoforlani\.ssh\sshkey_17.txt bandit17@bandit.labs.overthewire.org -p 2220

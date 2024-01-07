@@ -1,0 +1,10 @@
+il gioco si trova qua: https://overthewire.org/wargames/bandit/
+per connettersi usare ssh bandit#num_liv@bandit.labs.overthewire.org -p 2220
+immettere la password trovata nel livello precedente
+nel file XX.txt è salvata la password da inserire nel livello XX (quella trovata nel livello XX-1)
+
+
+per loggarsi invece tramite chiave privata usare:
+ssh -i C:\Users\federicoforlani\.ssh\file_chiave bandit#num_liv@bandit.labs.overthewire.org -p 2220
+
+git clone ssh://bandit31-git@127.0.0.1:2220/home/bandit31-git/repo

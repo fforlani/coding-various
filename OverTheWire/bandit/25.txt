@@ -1,0 +1,4 @@
+p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
+
+seq -f "VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar %04g" "0" "10000" > text
+cat text | nc 127.0.0.1 30002

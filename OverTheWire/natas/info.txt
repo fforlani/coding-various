@@ -1,0 +1,7 @@
+gioco consultabile su https://overthewire.org/wargames/natas/
+per accedere al livello visitare il sito http://natasX.natas.labs.overthewire.org
+
+il file chiamato N.txt contiene la password del livello N (livello per passare da N a N+1)
+ovvero permette di loggarsi sul sito http://natas(N+1).natas.labs.overthewire.org
+
+password di ##level## è salvata in  /etc/natas_webpass/natas##level##
