@@ -1,0 +1,26 @@
+import itertools
+
+class Solution:
+    def indexes(self, string, char):
+        return [i for i in range(len(string)) if string[i] == char]
+
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        map = {char: self.indexes(s, char) for char in s}
+        length = 0
+        limiting_char = set()
+        for key, val in map.items():
+            for i1, i2 in zip(val, val[1:]):
+                length = max(length, max([abs(i1 - i2)]))
+                limiting_char.add(key)
+        if length == 0:
+            return len(s)
+        return max(length, 
+                   min([map[char][1] for char in limiting_char]), 
+                       min(len(s) - map[char][-2] - 1 for char in limiting_char))
+
+print(Solution().lengthOfLongestSubstring("abcb"))
+print(Solution().lengthOfLongestSubstring("abcabcbb"))
+print(Solution().lengthOfLongestSubstring("bbbbb"))
+print(Solution().lengthOfLongestSubstring("pwwkew"))
+print(Solution().lengthOfLongestSubstring("abcde"))
+print(Solution().lengthOfLongestSubstring("abba"))

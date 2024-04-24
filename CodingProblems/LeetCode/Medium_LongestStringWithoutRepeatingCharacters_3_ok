@@ -1,0 +1,26 @@
+import itertools
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        chars = {c : -1 for c in s}
+        max_length = 0
+        cur_length = 0
+        for i in range(len(s)):
+            c = s[i]
+            max_length = max(max_length, cur_length)
+            if chars[c] > i - cur_length - 1:
+                cur_length = i - chars[c]
+            else:
+                cur_length += 1
+            chars[c] = i
+        return max(max_length, cur_length)
+
+print(Solution().lengthOfLongestSubstring("tmmzuxt"))
+print(Solution().lengthOfLongestSubstring("anviaj"))
+print(Solution().lengthOfLongestSubstring("dvdf"))
+print(Solution().lengthOfLongestSubstring("abcb"))
+print(Solution().lengthOfLongestSubstring("abcabcbb"))
+print(Solution().lengthOfLongestSubstring("bbbbb"))
+print(Solution().lengthOfLongestSubstring("pwwkew"))
+print(Solution().lengthOfLongestSubstring("abcde"))
+print(Solution().lengthOfLongestSubstring("abba"))
